@@ -12,11 +12,13 @@ class RegisterController extends Controller
      * @inheritdoc
      */
    public  function actionIndex() {
-    $this->render('index');
+   	//create object of model
+   	$model   = new UserForm ;
+   $this->render('index',array('model'=>$model));
   }
 
   public function actionRegister() {
- //create object of model class
+ //create object of model
     $model   = new UserForm ;
 
 if(isset($_POST['UserForm'])) {
